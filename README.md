@@ -7,6 +7,11 @@ Update_01: A simple, yet functional two-tier SQLite database with login and cach
            Addition of comments on algorithms, debug logs for tracking, and better format consistency. 
 TODO: Implementation of the inventory, the third tier of the database, connecting items to each cache.
       Adding images for each cache and each item while updating each layout's user interface (UI).
+
+Informal Code Review: https://youtu.be/Qr_exohsXqc
+           The TODO's and additional code edits performed from Update_01 on were informed by a code review I performed.
+           Breaking down the design and logic from the non-functioning original, I created a functional update to build upon.
+           The review starts with coverage on the original before moving onto the updated build.
                 
 Update_02: A functional three-tier SQLite database with login, cache creation, and adding items to an inventory.
            Implementation of a grid image selection for choosing cache and item images.

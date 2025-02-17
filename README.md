@@ -16,7 +16,14 @@ Informal Code Review: https://youtu.be/Qr_exohsXqc
 Update_02: A functional three-tier SQLite database with login, cache creation, and adding items to an inventory.
            Implementation of a grid image selection for choosing cache and item images.
            Continued addition of comments on algorithms, debug logs for tracking, and better format consistency. 
-TODO: Addition of an encryption manager to secure all stored data.
-      Addition of a permissions activity to allow access of GPS sensor.
+TODO: Addition of a permissions activity to allow access of GPS sensor.
       Addition of a GPS manager class to obtain GPS coordinates from sensor.
-      
+
+Update_03: A functional three-tier SQLite database holding usernames and passwords, cache details including latitude
+           and longitude (while location services permissions are granted), and specific item information per cache.
+           including login, cache creation, and adding items to an inventory.
+           Reduction of debug logs to clean up source code. 
+TODO: Addition of an encryption manager to secure all stored data.
+      Addition of user interface elements such as borders and art to organize space.
+      Addition of user interface functionality such as editing the count for items and the GPS location for caches. 
+      Clean up source code.

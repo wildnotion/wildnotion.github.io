@@ -43,4 +43,4 @@ FUTURE UPDATES:
 - Addition of user interface functionality such as editing the count for items and the GPS location for caches. 
 - Localization into other languages, such as Japanese and Spanish.
 
-**StashCache_Beta.apk:** The signed Android Package (APK) file generated using **Update_04** for testing and feedback 
+**StashCache_Beta.apk:** The signed Android Package (APK) file generated using **Update_04** for testing and feedback.

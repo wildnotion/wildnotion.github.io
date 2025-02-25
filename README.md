@@ -1,5 +1,6 @@
-wildnotion.github.io
-SNHU CS-499 C-1
+**Professional Self-Assessment**  
+
+SNHU CS-499 C-1  
 
 **Original CS360 Project:** Non-functional, with many comments only stating **"FIXME"** or **"Please add the correct logic."**
 

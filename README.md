@@ -16,22 +16,20 @@ With the completed enhanced project, my software engineering and design choices 
            
 Finally, I would like to release this project for free on the Android store after localizing it into a few languages, adding some additional UI artwork, and further testing it on physical devices out in the world. Until then, I have included a signed Android Package (APK) that can be installed on a physical or virtual device for anyone to download. While there may be many applications around the world that perform similar or the exact same functions, I know mine is simple and secure.  
 
+**Original CS360 Project: Zip Contents** Non-functional Android project, with many comments only stating **"FIXME"** or **"Please add the correct logic."**
 
-
-**Original CS360 Project:** Non-functional Android project, with many comments only stating **"FIXME"** or **"Please add the correct logic."**
-
-**Update_01:**  A simple, yet functional two-tier SQLite database with login and cache creation.
+**Update_01: Zip Contents**  A simple, yet functional two-tier SQLite database with login and cache creation.
            Addition of comments on algorithms, debug logs for tracking, and better format consistency.  
 
 TODO:
 - Implementation of the inventory, the third tier of the database, connecting items to each cache.
 - Adding images for each cache and each item while updating each layout's user interface (UI).
 
-**Code Review:** https://youtu.be/Qr_exohsXqc
+**Code Review: Link** https://youtu.be/Qr_exohsXqc
            The TODO's in this README were constructed after performing a code review on the the non-functioning **Original**, 
            and the functional **Update_01**. The review starts with coverage on the **Original** before moving onto the updated build.  
                 
-**Update_02:** A functional three-tier SQLite database with login, cache creation, and adding items to a cache's inventory.
+**Update_02: Zip Contents** A functional three-tier SQLite database with login, cache creation, and adding items to a cache's inventory.
            Implementation of a grid image selection for choosing cache and item images.
            Continued addition of comments on algorithms, debug logs for tracking, and better format consistency.  
 
@@ -39,9 +37,9 @@ TODO:
 - Addition of a permissions activity to allow access of GPS sensor.
 - Addition of a GPS manager class to obtain GPS coordinates from sensor.
 
-**Narrative for Update_02:**
+**Narrative for Update_02:** Following along with an initial plan of ensuring the base functionality of a three-tier database (i.e., users, caches, items), I began by creating constant points of reference for myself, in the form of an Agile board (i.e., cork boards with index cards), hand-drawn wireframe sketches of my desired UI, and a basic data flow diagram with . 
 
-**Update_03:** A functional three-tier SQLite database holding usernames and passwords, cache details including latitude
+**Update_03: Zip Contents** A functional three-tier SQLite database holding usernames and passwords, cache details including latitude
            and longitude (while location services permissions are granted), and specific item information per cache.
            including login, cache creation, and adding items to an inventory.
            Reduction of debug logs to clean up source code.  
@@ -53,10 +51,10 @@ TODO:
 
 **Narrative for Update_03:**
 
-**Update_04:** A functional three-tier SQLite database using AES-256 encryption for stored usernames, passwords, cache
-             details, and item details. While location services permissions are granted, allows acquisition of GPS
-             coordinates. Previous debug logs removed with most runtime errors currently being ignored in the try/catch
-             blocks if they occur. 
+**Update_04: Zip Contents** A functional three-tier SQLite database using AES-256 encryption for stored usernames, passwords, cache
+                            details, and item details. While location services permissions are granted, allows acquisition of GPS
+                            coordinates. Previous debug logs removed with most runtime errors currently being ignored in the try/catch
+                            blocks if they occur. 
 
 FUTURE UPDATES: 
 - Addition of user interface elements such as borders and art to organize space.

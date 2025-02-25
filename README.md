@@ -40,6 +40,9 @@ Continued addition of comments on algorithms, debug logs for tracking, and bette
 **Narrative for Update_02:**  
 Following along with my initial plan of ensuring the base functionality of a three-tier database (i.e., users, caches, items) in my application, I began by creating constant points of reference for myself, in the form of an Agile board (i.e., cork boards with index cards), hand-drawn wireframe sketches of my desired UI, and a basic data flow diagram with the contents of the database, its schema, included. Utilizing those design documents, I implemented the item tier of the SQLite database by ensuring their foreign keys were linked appropriately to their associated cache IDs. I had done similar when linking caches to user IDs in the previous update, so I added the additional methods to my DatabaseManager class to handle the interactions. Additionally, I created a pop-up layout that would be generated when clicking on an image during cache or item creation. This layout depicts a list of nine images that are programmatically assigned a listener, which allows them to be clicked. Once clicked, the associated integer that signifies the image's position in the list is saved as the desired variable, the pop-up selection grid layout closes, and the chosen image is displayed any time the cache or item is returned from the database. 
 
+<img src="images/CreateCacheItemGrid.png" alt="Broken Image" width="25%" />
+
+
 TODO:
 - Addition of a permissions activity to allow access of GPS sensor.
 - Addition of a GPS manager class to obtain GPS coordinates from sensor.

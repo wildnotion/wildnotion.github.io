@@ -23,7 +23,10 @@ Finally, I would like to release this project for free on the Android store afte
 Non-functional Android project, with many comments only stating **"FIXME"** or **"Please add the correct logic."**
 
 **Update_01: Zip Contents**   
-A simple, yet functional two-tier SQLite database with login and cache creation. Addition of comments on algorithms, debug logs for tracking, and better format consistency.  
+A simple, yet functional two-tier SQLite database with login and cache creation. Addition of comments on algorithms, debug logs for tracking, and better format consistency.
+<div align="center">
+           <img src="images/CacheList.png" alt="Broken Image" width="25%" />
+</div>
 
 **Code Review: Link**  
 https://youtu.be/Qr_exohsXqc  
@@ -42,9 +45,10 @@ Continued addition of comments on algorithms, debug logs for tracking, and bette
 
 **Narrative for Update_02:**  
 Following along with my initial plan of ensuring the base functionality of a three-tier database (i.e., users, caches, items) in my application, I began by creating constant points of reference for myself, in the form of an Agile board (i.e., cork boards with index cards), hand-drawn wireframe sketches of my desired UI, and a basic data flow diagram with the contents of the database, its schema, included. Utilizing those design documents, I implemented the item tier of the SQLite database by ensuring their foreign keys were linked appropriately to their associated cache IDs. I had done similar when linking caches to user IDs in the previous update, so I added the additional methods to my DatabaseManager class to handle the interactions. Additionally, I created a pop-up layout that would be generated when clicking on an image during cache or item creation. This layout depicts a list of nine images that are programmatically assigned a listener, which allows them to be clicked. Once clicked, the associated integer that signifies the image's position in the list is saved as the desired variable, the pop-up selection grid layout closes, and the chosen image is displayed any time the cache or item is returned from the database. 
-
-<img src="images/CreateCacheItemGrid.png" alt="Broken Image" width="25%" />
-
+<div align="center">
+           <img src="images/AddItem.png" alt="Broken Image" width="25%" />
+           <img src="images/CreateCacheItemGrid.png" alt="Broken Image" width="25%" />
+</div>
 
 TODO:
 - Addition of a permissions activity to allow access of GPS sensor.
@@ -59,6 +63,11 @@ including login, cache creation, and adding items to an inventory.
 Reduction of debug logs to clean up source code.  
 
 **Narrative for Update_03:**  
+
+<div align="center">
+           <img src="images/Options.png" alt="Broken Image" width="25%" />
+           <img src="images/CreateCacheGPS.png" alt="Broken Image" width="25%" />
+</div>
 
 TODO:
 - Addition of an encryption manager to secure all stored data.
@@ -75,6 +84,15 @@ blocks if they occur.
 
 **Narrative for Update_04:**
 
+<div align="center">
+           <img src="images/InventoryGPSCopy.png" alt="Broken Image" width="25%" />
+</div>
+
+<div align="center">
+           <img src="images/EncryptedData1.png" alt="Broken Image" width="75%" />
+           <img src="images/EncryptedData2.png" alt="Broken Image" width="75%" />
+           <img src="images/EncryptedData3.png" alt="Broken Image" width="75%" />
+</div>
 
 **StashCache_Beta.apk:**  
 The signed Android Package (APK) file generated using **Update_04** for testing and feedback.
@@ -83,3 +101,6 @@ POSSIBLE FUTURE UPDATES:
 - Addition of user interface elements such as borders and art to organize space.
 - Addition of user interface functionality such as editing the count for items and the GPS location for caches. 
 - Localization into Japanese, FIGS (French, Italian, German, and Spanish), and other common languages.
+<div align="center">
+           <img src="images/goblin.png" alt="Broken Image" width="5%" />
+</div>

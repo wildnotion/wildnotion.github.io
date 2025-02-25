@@ -84,11 +84,12 @@ blocks if they occur.
 **Narrative for Update_04:**  
 Many of the try/catch blocks I implemented began with only debug logs informing me of any issues during runtime. However, I easily doubled the amount
 of debug logs when implementing AES-256 encryption to my SQLite database. Using the internal Android KeyStore to generate part of the encryption key used
-for each piece of data was a challenge. Once each string or number converted to a string is encrypted, the unique key to decrypt it is added to the encrypted
+for each piece of data was a challenge to figure out. Once each string or number converted to a string is encrypted, the unique key to decrypt it is added to the encrypted
 string. The algorithm I eventually wrote that worked for logging in with encrypted usernames and passwords was to perform a loop on the username column
 decrypting each username for a check against the user input name for a match. Other than encrypted usernames requiring a little more attention, the rest of the
 encryption and decryption relied on primary and foreign keys that I did not encrypt. I also decided not to encrypt the column titles for SQL query simplicity
-and since the titles do not contain sensitive user-generated data. One final functionality I wanted to add was the ability to copy the GPS coordinates to the device'ss clipboard,
+and since the titles do not contain sensitive user-generated data. I removed the debug logs for code clarity as well as most of the extra toast message that no longer
+seemed necessary. One final functionality I wanted to add was the ability to copy the GPS coordinates to the device'ss clipboard,
 which I easily found simple documentation on how to implement. Now a user may open up Stash Cache under a clear, satellite filled sky, mark their location with a click
 of the GPS button on a new cache, bury some treasure at that location and keep track of each item in the encrypted database, leave the area, forget where they were, 
 open the cache, copy the coordinates to their clipboard, paste the coordinates in their favorite map app, and retrieve their once lost treasure.

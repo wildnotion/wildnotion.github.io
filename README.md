@@ -63,7 +63,7 @@ and longitude (while location services permissions are granted), and specific it
 Reduction of debug logs to clean up source code.  
 
 **Narrative for Update_03:**  
-After ensuring my database was fully functional with the variables I had assigned to each cache and each item, I focused on accessing the GPS sensor to obtain a device's current coordinates. Utilizing the Android API to fetch the location services from the sensor saved me a lot of coding, as the tools were already in place. While keeping the GPS sensor active helps keep location accuracy high, it is also a huge drain on the battery. With my design wanting to limit battery use yet keep high accuracy, I wrote an algorithm to first immediately fetch and return any last known location from when the GPS sensor was last active, then search for satellite signal until an acceptable accuracy is reached, which I set at 20 meters. Once the accuracy is reached, the GPS sensor stops communicating with satellites to conserve battery life, the current coordinates are returned by the function, and the UI is updated with the results. However, being able to use the GPS sensor in the first place requires a user to allow that functionality. I implemented a simple boolean to determine if a user had booted for the first time and prompted them with an option to allow location services to use the GPS sensor if they had. Additionally, I created a permissions page to allow toggling the permission on when denied, or opening the app settings to manually deny location services as they cannot be programmatically denied. When location permissions are denied, I removed the ability for the user to click the GPS button, however I still allow them to manually input numbers should they choose.
+After ensuring my database was fully functional with the variables I had assigned to each cache and each item, I focused on accessing the GPS sensor to obtain a device's current coordinates. Utilizing the Android API to fetch the location services from the sensor saved me a lot of coding, as the tools were already in place. While keeping the GPS sensor active helps keep location accuracy high, it is also a huge drain on the battery. With my design wanting to limit battery use yet keep high accuracy, I wrote an algorithm to first immediately fetch and return any last known location from when the GPS sensor was last active, then search for satellite signal until an acceptable accuracy is reached, which I set at 20 meters. Additionally, I removed the ability to click the GPS button while it is searching for satellite and I temporarily display a loading animation and message. Once the accuracy is reached, the GPS sensor stops communicating with satellites to conserve battery life, the current coordinates are returned by the function, and the UI is updated with the results. However, being able to use the GPS sensor in the first place requires a user to allow that functionality. I implemented a simple boolean to determine if a user had booted for the first time and prompted them with an option to allow location services to use the GPS sensor if they had. Additionally, I created a permissions page to allow toggling the permission on when denied, or opening the app settings to manually deny location services as they cannot be programmatically denied. When location permissions are denied, I removed the ability for the user to click the GPS button, however I still allow them to manually input numbers should they choose.
 
 <div align="center">
            <img src="images/Options.png" alt="Broken Image" width="25%" />
@@ -75,16 +75,23 @@ TODO:
 - Addition of user interface elements such as borders and art to organize space.
 - Clean up source code.
 
-
-
 **Update_04: Zip Contents**  
 A functional three-tier SQLite database using AES-256 encryption for stored usernames, passwords, cache
 details, and item details. While location services permissions are granted, allows acquisition of GPS
 coordinates. Previous debug logs removed with most runtime errors currently being ignored in the try/catch
 blocks if they occur. 
 
-**Narrative for Update_04:**
-I removed the ability to click the GPS button while it is searching for satellite and temporarily display a loading animation and message.
+**Narrative for Update_04:**  
+Many of the try/catch blocks I implemented began with only debug logs informing me of any issues during runtime. However, I easily doubled the amount
+of debug logs when implementing AES-256 encryption to my SQLite database. Using the internal Android KeyStore to generate part of the encryption key used
+for each piece of data was a challenge. Once each string or number converted to a string is encrypted, the unique key to decrypt it is added to the encrypted
+string. The algorithm I eventually wrote that worked for logging in with encrypted usernames and passwords was to perform a loop on the username column
+decrypting each username for a check against the user input name for a match. Other than encrypted usernames requiring a little more attention, the rest of the
+encryption and decryption relied on primary and foreign keys that I did not encrypt. I also decided not to encrypt the column titles for SQL query simplicity
+and since the titles do not contain sensitive user-generated data. One final functionality I wanted to add was the ability to copy the GPS coordinates to the device'ss clipboard,
+which I easily found simple documentation on how to implement. Now a user may open up Stash Cache under a clear, satellite filled sky, mark their location with a click
+of the GPS button on a new cache, bury some treasure at that location and keep track of each item in the encrypted database, leave the area, forget where they were, 
+open the cache, copy the coordinates to their clipboard, paste the coordinates in their favorite map app, and retrieve their once lost treasure.
 
 <div align="center">
            <img src="images/InventoryGPSCopy.png" alt="Broken Image" width="25%" />
@@ -106,3 +113,5 @@ POSSIBLE FUTURE UPDATES:
 <div align="center">
            <img src="images/goblin.png" alt="Broken Image" width="5%" />
 </div>
+
+**The End**
